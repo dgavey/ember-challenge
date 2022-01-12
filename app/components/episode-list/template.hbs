@@ -1,0 +1,25 @@
+<table>
+  <thead>
+    <th>Title</th>
+    <th>Season</th>
+    <th>Episode</th>
+  </thead>
+  <tbody>
+     {{#each this.episodes as |episode|}}
+     {{log episode}}
+     <tr>
+       <td>
+         {{#if episode.title}}
+           {{episode.title}}
+         {{else}}
+          Title not found?
+         {{/if}}
+         
+        </td>
+       <td>{{episode.season}}</td>
+       <td>{{episode.episodeInSeason}}</td>
+     </tr>
+    {{/each}}
+  </tbody>
+ 
+</table>
